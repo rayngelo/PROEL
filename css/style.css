@@ -1,0 +1,708 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+body {
+    font-family: Arial, sans-serif;
+    color: #111;
+    background: #fff;
+}
+a {
+    color: #111;
+    text-decoration: none;
+}
+.promo-bar {
+    background: #292929;
+    color: white;
+    text-align: center;
+    padding: 6px;
+    font-size: 13px;
+    letter-spacing: 0.5px;
+}
+.navbar {
+    display: flex;
+    align-items: center;
+    padding: 15px 30px;
+    border-bottom: 2px solid #111;
+    position: relative;
+}
+.logo {
+    display: flex;
+    align-items: center;
+    font-weight: bold;
+    font-size: 20px;
+    transition: 0.3s;
+}
+.logo:hover {
+    transform: translateX(5px);
+}
+.logo img {
+    width: 35px;
+    margin-right: 8px;
+}
+nav {
+    position: absolute;
+    left: 50%;
+    transform: translateX(-50%);
+    display: flex;
+    gap: 25px;
+}
+nav a {
+    font-weight: bold;
+    font-size: 13px;
+    transition: 0.2s;
+}
+nav a:hover {
+    text-decoration: underline;
+    letter-spacing: 1px;
+}
+main {
+    padding: 30px;
+}
+.hero-text {
+    max-width: 800px;
+    text-align: center;
+    margin: 20px auto 55px;
+}
+.hero-text span,
+.featured-info > span,
+.collection-header > span,
+.contact-heading > span {
+    font-size: 11px;
+    font-weight: bold;
+    letter-spacing: 2px;
+    color: #777;
+}
+.hero-text h1 {
+    font-size: 38px;
+    line-height: 1.2;
+    margin-top: 12px;
+}
+.featured {
+    display: flex;
+    max-width: 1000px;
+    margin: auto;
+    gap: 50px;
+    align-items: center;
+}
+.featured-image {
+    width: 55%;
+    overflow: hidden;
+}
+.featured-image img {
+    width: 100%;
+    display: block;
+    transition: 0.5s;
+}
+.featured-image:hover img {
+    transform: scale(1.04);
+}
+.featured-info {
+    width: 45%;
+}
+.featured-info h2 {
+    font-size: 24px;
+    margin: 10px 0;
+}
+.featured-info h1 {
+    font-size: 48px;
+    letter-spacing: 2px;
+    margin-bottom: 15px;
+}
+.featured-info p {
+    line-height: 1.6;
+    color: #444;
+    margin-bottom: 15px;
+}
+.stars {
+    color: #f5b400;
+    font-size: 23px;
+    margin: 10px 0 18px;
+}
+.see-more {
+    display: inline-block;
+    font-size: 13px;
+    font-weight: bold;
+    border-bottom: 1px solid #111;
+    padding-bottom: 4px;
+    transition: 0.2s;
+}
+.see-more:hover {
+    letter-spacing: 1px;
+}
+.other-collection {
+    max-width: 1100px;
+    margin: 80px auto 20px;
+    padding-top: 45px;
+    border-top: 2px solid #111;
+}
+.collection-header {
+    text-align: center;
+    margin-bottom: 30px;
+}
+.collection-header h2 {
+    font-size: 32px;
+    margin: 8px 0;
+}
+.collection-header p {
+    color: #555;
+}
+.shoe-grid {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 20px;
+}
+.shoe-card {
+    text-align: center;
+    transition: 0.3s;
+}
+.shoe-card-image {
+    overflow: hidden;
+    background: #f5f5f5;
+    margin-bottom: 12px;
+}
+.shoe-card img {
+    width: 100%;
+    height: 200px;
+    object-fit: cover;
+    display: block;
+    transition: 0.4s;
+}
+.shoe-card:hover img {
+    transform: scale(1.06);
+}
+.shoe-card h3 {
+    font-size: 15px;
+    margin-bottom: 5px;
+}
+.shoe-card p {
+    font-size: 12px;
+    color: #777;
+}
+.product-page,
+.contact-container {
+    display: flex;
+    max-width: 950px;
+    margin: 40px auto;
+    gap: 40px;
+}
+.product-image,
+.product-info,
+.store-info,
+.contact-form {
+    width: 50%;
+}
+.product-image-box {
+    overflow: hidden;
+    border: 1px solid #ddd;
+}
+.product-image-box img {
+    width: 100%;
+    display: block;
+    transition: 0.4s;
+}
+.product-image-box:hover img {
+    transform: scale(1.05);
+}
+.product-image > h3 {
+    margin-top: 10px;
+}
+.product-info > span {
+    font-size: 11px;
+    font-weight: bold;
+    letter-spacing: 2px;
+    color: #777;
+}
+.product-info h1 {
+    font-size: 36px;
+    margin: 8px 0;
+}
+.product-info h3 {
+    font-size: 12px;
+    margin-top: 20px;
+    letter-spacing: 1px;
+}
+.sizes,
+.colors {
+    display: flex;
+    gap: 8px;
+    margin: 10px 0 20px;
+}
+.sizes button {
+    padding: 8px 14px;
+    background: white;
+    border: 1px solid #111;
+    cursor: pointer;
+    transition: 0.2s;
+}
+.sizes button:hover {
+    background: #111;
+    color: white;
+}
+.colors img {
+    width: 55px;
+    height: 55px;
+    object-fit: cover;
+    border: 1px solid #ddd;
+    cursor: pointer;
+    transition: 0.2s;
+}
+.colors img:hover {
+    border-color: #111;
+    transform: scale(1.05);
+}
+.add-cart {
+    width: 100%;
+    padding: 13px;
+    margin-top: 5px;
+    background: #111;
+    color: white;
+    border: 1px solid #111;
+    font-weight: bold;
+    cursor: pointer;
+    transition: 0.2s;
+}
+.add-cart:hover {
+    background: white;
+    color: #111;
+}
+.about-page {
+    max-width: 1100px;
+    margin: auto;
+}
+.about-heading {
+    text-align: center;
+    max-width: 700px;
+    margin: 20px auto 50px;
+}
+.about-heading span,
+.about-info span,
+.about-bottom span {
+    font-size: 12px;
+    font-weight: bold;
+    letter-spacing: 2px;
+    color: #777;
+}
+.about-heading h1 {
+    font-size: 42px;
+    margin: 10px 0;
+}
+.about-heading p {
+    line-height: 1.6;
+    color: #555;
+}
+.about-content {
+    display: flex;
+    max-width: 950px;
+    margin: auto;
+    gap: 50px;
+    align-items: center;
+}
+.about-image,
+.about-info {
+    width: 50%;
+}
+.about-image {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border: 1px solid #ddd;
+    padding: 40px;
+    min-height: 300px;
+}
+.about-image img {
+    width: 70%;
+    max-width: 250px;
+    transition: 0.4s;
+}
+.about-image:hover img {
+    transform: scale(1.08);
+}
+.about-info h2 {
+    font-size: 38px;
+    margin: 10px 0 15px;
+}
+.about-info p {
+    line-height: 1.7;
+    margin-bottom: 15px;
+    color: #444;
+}
+.about-bottom {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 30px;
+    margin: 50px auto 20px;
+    max-width: 950px;
+}
+.about-bottom div {
+    border-top: 2px solid #111;
+    padding-top: 20px;
+}
+.about-bottom p {
+    line-height: 1.6;
+    margin: 12px 0;
+}
+.about-bottom a {
+    display: inline-block;
+    margin-top: 5px;
+    font-size: 13px;
+    font-weight: bold;
+    transition: 0.2s;
+}
+.about-bottom a:hover {
+    text-decoration: underline;
+    letter-spacing: 1px;
+}
+.collection-page {
+    display: flex;
+    max-width: 1100px;
+    margin: auto;
+    gap: 35px;
+}
+.filter {
+    width: 170px;
+    height: fit-content;
+    border: 2px solid #111;
+    flex-shrink: 0;
+}
+.filter h2 {
+    padding: 15px;
+    text-align: center;
+    border-bottom: 2px solid #111;
+}
+.filter a {
+    display: block;
+    padding: 14px;
+    text-align: center;
+    transition: 0.2s;
+}
+.filter a:hover {
+    background: #111;
+    color: white;
+}
+.collection-products {
+    flex: 1;
+}
+.collection-item {
+    display: flex;
+    gap: 35px;
+    align-items: center;
+    margin-bottom: 30px;
+    padding: 20px;
+    border: 1px solid #ddd;
+    transition: 0.3s;
+}
+.collection-item:hover {
+    border-color: #111;
+    transform: translateY(-4px);
+}
+.collection-image {
+    width: 260px;
+    height: 210px;
+    overflow: hidden;
+    flex-shrink: 0;
+}
+.collection-image img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    transition: 0.4s;
+}
+.collection-item:hover .collection-image img {
+    transform: scale(1.08);
+}
+.collection-info {
+    flex: 1;
+}
+.collection-info span {
+    font-size: 12px;
+    font-weight: bold;
+    letter-spacing: 1px;
+    color: #777;
+}
+.collection-info h2 {
+    font-size: 28px;
+    margin: 8px 0;
+}
+.collection-info p {
+    line-height: 1.6;
+    margin: 10px 0 20px;
+    color: #444;
+}
+.collection-link {
+    display: inline-block;
+    font-size: 13px;
+    font-weight: bold;
+    transition: 0.2s;
+}
+.collection-link:hover {
+    text-decoration: underline;
+    letter-spacing: 1px;
+}
+.collection-header {
+    text-align: center;
+    margin: 20px 0 40px;
+}
+.collection-header h1 {
+    font-size: 40px;
+    margin-bottom: 8px;
+}
+.contact-page {
+    max-width: 1100px;
+    margin: auto;
+}
+.contact-heading {
+    max-width: 700px;
+    text-align: center;
+    margin: 20px auto 55px;
+}
+.contact-heading h1 {
+    font-size: 42px;
+    margin: 10px 0;
+}
+.contact-heading p {
+    line-height: 1.6;
+    color: #555;
+}
+.contact-container {
+    align-items: flex-start;
+}
+.store-info img {
+    width: 100%;
+    display: block;
+    border: 1px solid #ddd;
+}
+.store-details {
+    margin-top: 25px;
+}
+.store-details h2 {
+    font-size: 24px;
+    margin-bottom: 20px;
+}
+.store-location {
+    border-top: 1px solid #ddd;
+    padding: 18px 0;
+}
+.store-location h3 {
+    font-size: 15px;
+    margin-bottom: 8px;
+}
+.store-location p {
+    line-height: 1.6;
+    color: #555;
+    font-size: 14px;
+}
+.contact-form {
+    border: 1px solid #ddd;
+    padding: 30px;
+}
+.contact-form h2 {
+    font-size: 24px;
+    margin-bottom: 25px;
+}
+.contact-form label {
+    display: block;
+    font-size: 12px;
+    font-weight: bold;
+    margin-bottom: 6px;
+}
+.contact-form input,
+.contact-form textarea {
+    width: 100%;
+    padding: 12px;
+    margin: 0 0 18px;
+    border: 1px solid #ccc;
+    font-family: Arial, sans-serif;
+    font-size: 14px;
+}
+.contact-form input:focus,
+.contact-form textarea:focus {
+    outline: none;
+    border-color: #111;
+}
+.contact-form textarea {
+    height: 150px;
+    resize: vertical;
+}
+.contact-form button {
+    width: 100%;
+    padding: 13px;
+    background: #111;
+    color: white;
+    border: 1px solid #111;
+    font-weight: bold;
+    cursor: pointer;
+    transition: 0.2s;
+}
+.contact-form button:hover {
+    background: white;
+    color: #111;
+}
+.contact-details {
+    border-top: 1px solid #ddd;
+    margin-top: 25px;
+    padding-top: 20px;
+}
+.contact-details p {
+    font-size: 13px;
+    margin: 8px 0;
+}
+footer {
+    background: #111;
+    color: white;
+    margin-top: 80px;
+    padding: 50px 40px 20px;
+}
+footer a {
+    color: white;
+}
+.footer-content {
+    max-width: 1100px;
+    margin: auto;
+    display: grid;
+    grid-template-columns: 2fr 1fr 1.5fr;
+    gap: 60px;
+    padding-bottom: 45px;
+}
+.footer-content h2 {
+    font-size: 26px;
+    margin-bottom: 12px;
+}
+.footer-content h3 {
+    font-size: 12px;
+    letter-spacing: 2px;
+    margin-bottom: 15px;
+}
+.footer-content p {
+    color: #bbb;
+    font-size: 13px;
+    line-height: 1.6;
+}
+.footer-brand p {
+    max-width: 300px;
+    margin-bottom: 18px;
+}
+.footer-shop {
+    display: inline-block;
+    font-size: 12px;
+    font-weight: bold;
+    border-bottom: 1px solid white;
+    padding-bottom: 5px;
+    transition: 0.2s;
+}
+.footer-shop:hover {
+    letter-spacing: 1px;
+}
+.footer-links {
+    display: flex;
+    flex-direction: column;
+    gap: 9px;
+}
+.footer-links a {
+    font-size: 13px;
+    color: #bbb;
+    transition: 0.2s;
+}
+.footer-links a:hover {
+    color: white;
+    transform: translateX(4px);
+}
+.footer-contact {
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+}
+.footer-bottom {
+    max-width: 1100px;
+    margin: auto;
+    padding-top: 20px;
+    border-top: 1px solid #444;
+    display: flex;
+    justify-content: space-between;
+    gap: 20px;
+}
+.footer-bottom p {
+    font-size: 11px;
+    color: #888;
+}
+@media (max-width: 700px) {
+    nav {
+        display: none;
+    }
+    .featured,
+    .product-page,
+    .contact-container,
+    .about-content,
+    .collection-page,
+    .collection-item {
+        flex-direction: column;
+    }
+    .featured-image,
+    .featured-info,
+    .product-image,
+    .product-info,
+    .store-info,
+    .contact-form {
+        width: 100%;
+    }
+    .hero-text h1 {
+        font-size: 28px;
+    }
+    .featured-info h1 {
+        font-size: 38px;
+    }
+    .shoe-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+    .collection-page {
+        gap: 20px;
+    }
+    .filter {
+        width: 100%;
+    }
+    .collection-image {
+        width: 100%;
+        height: 220px;
+    }
+    .collection-info h2 {
+        font-size: 24px;
+    }
+    .about-heading h1 {
+        font-size: 30px;
+    }
+    .about-content {
+        gap: 30px;
+    }
+    .about-image,
+    .about-info {
+        width: 100%;
+    }
+    .about-image {
+        min-height: 250px;
+    }
+    .about-bottom {
+        grid-template-columns: 1fr;
+        gap: 30px;
+    }
+    .product-info h1 {
+        font-size: 28px;
+    }
+    .contact-heading h1 {
+        font-size: 32px;
+    }
+    .contact-form {
+        padding: 20px;
+    }
+    .footer-content {
+        grid-template-columns: 1fr;
+        gap: 35px;
+    }
+    .footer-bottom {
+        flex-direction: column;
+        text-align: center;
+    }
+    footer {
+        padding: 40px 25px 20px;
+    }
+}
